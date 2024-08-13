@@ -6,6 +6,17 @@
     <packaging>war</packaging>
     <version>1.0</version>
     <name>hello</name>
+   <repository>
+   <id>maven-releases</id>
+   <name>maven-releases</name>
+   <url>http://13.53.137.236:8081/repository/maven-releases/</url>
+   </repository>   
+<distributionmanagement>
+<repository>
+<id>maven-releases</id>
+<url>http://13.53.137.236:8081/repository/maven-releases/</url>
+</repository>
+</distributionmanagement>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

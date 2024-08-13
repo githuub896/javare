@@ -1,43 +1,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>com.boxfuse.samples</groupId>
     <artifactId>hello</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
     <name>hello</name>
-         <project>
-    ...
-    <repositories>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://13.53.137.236:8081/repository/maven-releases/</url>
-        </repository>
-        <repository>
-            <id>nexus-snapshots</id>
-            <url>http://your-nexus-server/repository/maven-snapshots/</url>
-        </repository>
-    </repositories>
-    ...
-</project>
-
-   <repository>
-   <id>maven-releases</id>
-   <name>maven-releases</name>
-   <url>http://13.53.137.236:8081/repository/maven-releases/</url>
-   </repository>   
-<distributionmanagement>
-         
-<repository>
-<id>maven-releases</id>
-<url>http://13.53.137.236:8081/repository/maven-releases/</url>
-</repository>
-</distributionmanagement>
     <url>https://github.com/boxfuse/boxfuse-sample-java-war-hello</url>
+
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -46,6 +22,7 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -67,4 +44,22 @@
             </plugin>
         </plugins>
     </build>
+
+    <!-- Distribution Management Section -->
+    <distributionManagement>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://13.53.137.236:8081/repository/maven-releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <!-- Repositories Section -->
+    <repositories>
+        <repository>
+            <id>maven-releases</id>
+            <name>maven-releases</name>
+            <url>http://13.53.137.236:8081/repository/maven-releases/</url>
+        </repository>
+
+    </repositories>
 </project>

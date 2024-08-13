@@ -6,12 +6,28 @@
     <packaging>war</packaging>
     <version>1.0</version>
     <name>hello</name>
+         <project>
+    ...
+    <repositories>
+        <repository>
+            <id>maven-releases</id>
+            <url>http://13.53.137.236:8081/repository/maven-releases/</url>
+        </repository>
+        <repository>
+            <id>nexus-snapshots</id>
+            <url>http://your-nexus-server/repository/maven-snapshots/</url>
+        </repository>
+    </repositories>
+    ...
+</project>
+
    <repository>
    <id>maven-releases</id>
    <name>maven-releases</name>
    <url>http://13.53.137.236:8081/repository/maven-releases/</url>
    </repository>   
 <distributionmanagement>
+         
 <repository>
 <id>maven-releases</id>
 <url>http://13.53.137.236:8081/repository/maven-releases/</url>
